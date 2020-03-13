@@ -1,6 +1,14 @@
 <template>
-  <div class="">
-  
+  <div class="index container">
+      <div class="card" v-for="smoothie in smoothies" :key="smoothie.id">
+        <div class="card-content">
+          <h2 class="indigo-text">{{smoothie.title}}</h2>
+          <ul class="ingredients">
+              <li v-for="(ing, index) in smoothie.ingredients" :key="index"> <span class="chip">{{ ing }}</span></li>
+          </ul>
+        </div>
+      </div>
+      
       
   </div>
 </template>
